@@ -2,7 +2,8 @@
 
 return [
     'class' => \yii\db\Connection::class,
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+    // 'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+    'dsn' => 'mysql:host=mysql-8.0;dbname=loganalyzer',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',
