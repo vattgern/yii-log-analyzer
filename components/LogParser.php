@@ -10,8 +10,10 @@ class LogParser
      * Парсинг одной строки nginx лога
      *
      * @param string $row
+     *
+     * @return array|null
      */
-    public static function parse(string $row)
+    public static function parse(string $row): array|null
     {
         $pattern = '/^(\S+) - - \[([^\]]+)\] "([^"]*)" \d+ \d+ "([^"]*)" "([^"]*)"$/';
 

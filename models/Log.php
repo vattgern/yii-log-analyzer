@@ -2,17 +2,16 @@
 
 namespace app\models;
 
-use Override;
 use yii\db\ActiveRecord;
 
 class Log extends ActiveRecord
 {
-    public static function tableName()
+    public static function tableName(): string
     {
         return '{{%logs}}';
     }
 
-    public function rules()
+    public function rules(): array
     {
         return [
             [['ip', 'datetime', 'url'], 'required'],
