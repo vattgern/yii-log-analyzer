@@ -27,7 +27,7 @@ class LogController extends Controller
 
         $success = 0;
         $failed = 0;
-
+        $this->stdout("Начало операции обработки\n");
         while (($line = fgets($fp)) !== false) {
             $data = LogParser::parse($line);
             if ($data) {
@@ -43,7 +43,7 @@ class LogController extends Controller
             }
 
             if (($success + $failed) % 1000 === 0)
-                $this->stdout("Processed: " . ($success + $failed) . "\n");
+                $this->stdout("Обработано: " . ($success + $failed) . "\n");
         }
 
         fclose($fp);
