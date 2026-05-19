@@ -120,15 +120,6 @@ class SiteController extends Controller
 
         $chart1Data = $this->chartCountRequestsByDate($query);
         $chart2Data = $this->chartTopThreeBrowsers($query, $topBrowsers);
-        Yii::info([
-            'var' => 'chart2Data',
-            'data' => $chart2Data
-        ]);
-
-        Yii::info([
-            'var' => 'where',
-            'data' => $query->where
-        ]);
 
         return $this->render('index', [
             'chart1Data'    => json_encode($chart1Data),
